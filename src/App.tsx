@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import LandingPage from '@/pages/LandingPage';
+import NotFoundPage from '@/pages/NotFoundPage';
 
 const ProductPage = lazy(() => import('@/pages/ProductPage'));
 const CheckoutPage = lazy(() => import('@/pages/CheckoutPage'));
@@ -17,6 +18,8 @@ export default function App() {
         <Route path="/product" element={<ProductPage />} />
 
         <Route path="/checkout" element={<CheckoutPage />} />
+
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Suspense>
   );
