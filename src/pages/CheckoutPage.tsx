@@ -1,5 +1,9 @@
 import { useState } from 'react';
 
+import { useForm, type SubmitHandler } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+
 import Button from '@/components/Button';
 import Section from '@/components/Section';
 
@@ -7,36 +11,41 @@ import { cn } from '@/utils/cn';
 
 //----------------------------------------------------------------------------//
 
-interface FormState {
-  fullName: string;
-  email: string;
-  address: string;
-}
-
-const getInitialState = (): FormState => ({
-  fullName: '',
-  email: '',
-  address: '',
+const formSchema = z.object({
+  fullName: z.string().min(2, { message: 'The full name is required' }),
+  email: z.email({ message: 'Invalid email' }),
+  address: z.string().min(2, { message: 'The address is required' }),
 });
+
+type FormSchema = z.infer<typeof formSchema>;
+
+//----------------------------------------------------------------------------//
 
 const baseInputClassName =
   'w-full rounded-xl border border-white/10 bg-slate-900 px-4 py-3 text-white transition outline-none placeholder:text-white/30 focus:border-cyan-400';
 
-// min-h-11 w-full rounded-xl border border-white/10 bg-slate-900 px-4 py-3 text-white transition outline-none placeholder:text-white/30 focus:border-cyan-400
-// min-h-32 w-full rounded-xl border border-white/10 bg-slate-900 px-4 py-3 text-white transition outline-none placeholder:text-white/30 focus:border-cyan-400
-
 export default function CheckoutPage() {
-  const [form, setForm] = useState<FormState>(getInitialState());
   const [submitted, setSubmitted] = useState(false);
 
-  function updateField<K extends keyof FormState>(key: K, value: FormState[K]) {
-    setForm((prev) => ({ ...prev, [key]: value }));
-  }
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<FormSchema>({
+    resolver: zodResolver(formSchema),
+  });
 
-  function handleSubmit(e: React.SubmitEvent) {
-    e.preventDefault();
+  const onSubmit: SubmitHandler<FormSchema> = async (data) => {
+    // Pause execution for 1 second
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    console.log(data);
+
     setSubmitted(true);
-  }
+
+    reset();
+  };
 
   return (
     <main className="min-h-screen bg-slate-950 text-white">
@@ -55,7 +64,10 @@ export default function CheckoutPage() {
             </p>
           </div>
 
-          <form className="space-y-6" onSubmit={handleSubmit}>
+          <form
+            className="space-y-3"
+            onSubmit={(event) => void handleSubmit(onSubmit)(event)}
+          >
             <div>
               <label
                 htmlFor="fullName"
@@ -63,15 +75,18 @@ export default function CheckoutPage() {
               >
                 Full name
               </label>
+
               <input
                 id="fullName"
-                name="fullName"
-                value={form.fullName}
-                onChange={(e) => updateField('fullName', e.target.value)}
+                {...register('fullName')}
                 className={cn(baseInputClassName, 'min-h-11')}
                 placeholder="Your Full Name"
                 required
               />
+
+              <span className="text-xs text-red-300">
+                {errors?.fullName?.message} &nbsp;
+              </span>
             </div>
 
             <div>
@@ -84,14 +99,16 @@ export default function CheckoutPage() {
 
               <input
                 id="email"
-                name="email"
                 type="email"
-                value={form.email}
-                onChange={(e) => updateField('email', e.target.value)}
+                {...register('email')}
                 className={cn(baseInputClassName, 'min-h-11')}
                 placeholder="name@domain.ext"
                 required
               />
+
+              <span className="text-xs text-red-300">
+                {errors?.email?.message} &nbsp;
+              </span>
             </div>
 
             <div>
@@ -101,15 +118,18 @@ export default function CheckoutPage() {
               >
                 Shipping address
               </label>
+
               <textarea
                 id="address"
-                name="address"
-                value={form.address}
-                onChange={(e) => updateField('address', e.target.value)}
+                {...register('address')}
                 className={cn(baseInputClassName, 'min-h-32')}
                 placeholder="Street, number, postal code, city"
                 required
               />
+
+              <span className="text-xs text-red-300">
+                {errors?.address?.message} &nbsp;
+              </span>
             </div>
 
             <div className="flex flex-wrap gap-4">
