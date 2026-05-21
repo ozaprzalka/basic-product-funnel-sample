@@ -1,17 +1,23 @@
+import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import LandingPage from '@/pages/LandingPage';
-import ProductPage from '@/pages/ProductPage';
-import CheckoutPage from '@/pages/CheckoutPage';
+
+const ProductPage = lazy(() => import('@/pages/ProductPage'));
+const CheckoutPage = lazy(() => import('@/pages/CheckoutPage'));
+
+const FallbackLoader = () => <div>Loading...</div>;
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<LandingPage />} />
+    <Suspense fallback={<FallbackLoader />}>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
 
-      <Route path="/product" element={<ProductPage />} />
+        <Route path="/product" element={<ProductPage />} />
 
-      <Route path="/checkout" element={<CheckoutPage />} />
-    </Routes>
+        <Route path="/checkout" element={<CheckoutPage />} />
+      </Routes>
+    </Suspense>
   );
 }
