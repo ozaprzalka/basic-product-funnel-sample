@@ -2,7 +2,18 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 
+import { name } from './package.json';
+
+const nodeEnv = `${process.env.NODE_ENV}`;
+
+console.log(`package name: ${name}`);
+console.log(`environment: ${nodeEnv}`);
+
+const isProduction = `${nodeEnv}` === 'production';
+
 // https://vite.dev/config/
 export default defineConfig({
+  ...(isProduction ? { base: `/${name}/` } : { build: { sourcemap: true } }),
+
   plugins: [tailwindcss(), react()],
 });
