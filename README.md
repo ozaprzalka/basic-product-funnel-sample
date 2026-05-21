@@ -30,3 +30,6 @@ The React Compiler is not enabled on this template because of its impact on dev 
   - [Integrating Zod for Form Validation in React | Till it's done](https://tillitsdone.com/en/blogs/zod-form-validation-in-react/)
 
   - [Promise-returning function provided to attribute where a void return was expected. · react-hook-form · Discussion #8622](https://github.com/orgs/react-hook-form/discussions/8622)
+
+- [Zod](https://zod.dev/)
+  - [6 Zod Schema Patterns to Make Your Input Validation 10x More Robust | by Jakub Radzik - Medium]() (2026/02/15)
