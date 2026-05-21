@@ -18,7 +18,7 @@ export default function ProductPage() {
       <Section>
         <nav className="mb-8">
           <Button to="/" variant="navigation">
-            Back to landing page
+            Back to the landing page
           </Button>
         </nav>
 
