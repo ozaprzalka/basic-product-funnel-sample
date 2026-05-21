@@ -10,6 +10,13 @@ The React Compiler is not enabled on this template because of its impact on dev 
 
 ## Useful references
 
+- [Vitest](https://vitest.dev/)
+  - [Getting Started | Guide - Vitest](https://vitest.dev/guide/)
+
+  - [Configuring Vitest | Vitest](https://vitest.dev/config/)
+
+  - [Writing Tests | Guide - Vitest](https://vitest.dev/guide/learn/writing-tests.html)
+
 - [React Router](https://reactrouter.com/)
   - [BrowserRouter basename](https://reactrouter.com/api/declarative-routers/BrowserRouter#basename)
 

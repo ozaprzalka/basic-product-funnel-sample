@@ -21,7 +21,8 @@
     "ci": "cross-env NODE_ENV=production run-s build",
     "predeploy:gh-pages": "touch dist/.nojekyll",
     "deploy:gh-pages": "gh-pages -d dist --dotfiles",
-    "deploy": "run-s ci deploy:gh-pages"
+    "deploy": "run-s ci deploy:gh-pages",
+    "test": "vitest run"
   },
   "dependencies": {
     "@hookform/resolvers": "5.2.2",
@@ -35,6 +36,9 @@
   "devDependencies": {
     "@eslint/js": "10.0.1",
     "@tailwindcss/vite": "4.3.0",
+    "@testing-library/jest-dom": "6.9.1",
+    "@testing-library/react": "16.3.2",
+    "@types/jest": "30.0.0",
     "@types/node": "24.12.3",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
@@ -49,6 +53,7 @@
     "gh-pages": "6.3.0",
     "globals": "17.6.0",
     "is-ci": "4.1.0",
+    "jsdom": "29.1.1",
     "lint-staged": "17.0.5",
     "npm-run-all2": "9.0.0",
     "prettier": "3.8.3",
@@ -57,7 +62,8 @@
     "tailwind-merge": "^3.6.0",
     "typescript": "6.0.2",
     "typescript-eslint": "8.59.2",
-    "vite": "8.0.12"
+    "vite": "8.0.12",
+    "vitest": "4.1.7"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,md,html,css,scss}": "prettier --write",
