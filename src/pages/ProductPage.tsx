@@ -17,12 +17,9 @@ export default function ProductPage() {
     <main className="min-h-screen bg-slate-950 text-white">
       <Section>
         <nav className="mb-8">
-          <a
-            href="/"
-            className="text-sm text-white/60 transition hover:text-white"
-          >
-            Back to landing
-          </a>
+          <Button to="/" variant="navigation">
+            Back to landing page
+          </Button>
         </nav>
 
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">

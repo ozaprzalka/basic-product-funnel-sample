@@ -6,7 +6,7 @@ import { cn } from '@/utils/cn';
 
 //----------------------------------------------------------------------------//
 
-type Variant = 'primary' | 'secondary' | 'ghost';
+type Variant = 'primary' | 'secondary' | 'ghost' | 'navigation';
 
 interface BaseProps {
   children: ReactNode;
@@ -36,6 +36,8 @@ const styles = {
 
   ghost:
     'border border-white/15 bg-white/5 text-white hover:bg-white/10 focus-visible:outline-white',
+
+  navigation: 'text-sm text-white/60 transition hover:text-white',
 } as const satisfies Record<Variant, string>;
 
 //----------------------------------------------------------------------------//
