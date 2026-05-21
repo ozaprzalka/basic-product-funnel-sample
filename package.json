@@ -4,12 +4,20 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "unset:git-hooks-path": "git config --unset core.hooksPath",
+    "simple-git-hooks": "npx simple-git-hooks",
+    "postinstall": "is-ci || npm run simple-git-hooks",
+    "check:prettier": "prettier --check \"**/*.{js,jsx,ts,tsx,md,mdx}\"",
+    "check:eslint": "eslint --cache .",
+    "check:ts": "tsc --noEmit",
+    "check": "run-s check:ts check:prettier check:eslint",
+    "lint:prettify": "prettier --write \"**/*.{js,jsx,ts,tsx,md,mdx}\"",
+    "lint:eslint": "eslint --cache --fix .",
+    "lint": "run-s lint:prettify lint:eslint",
     "start": "vite",
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview",
-    "prettier": "prettier --check \"**/*.{js,jsx,ts,tsx,md,mdx}\"",
-    "lint": "eslint ."
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "19.2.6",
@@ -24,16 +32,29 @@
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "6.0.1",
+    "cross-env": "10.1.0",
     "eslint": "10.3.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "5.5.5",
     "eslint-plugin-react-hooks": "7.1.1",
     "eslint-plugin-react-refresh": "0.5.2",
+    "gh-pages": "6.3.0",
     "globals": "17.6.0",
+    "is-ci": "4.1.0",
+    "lint-staged": "17.0.5",
+    "npm-run-all2": "9.0.0",
     "prettier": "3.8.3",
     "prettier-plugin-tailwindcss": "0.8.0",
+    "simple-git-hooks": "2.13.1",
     "typescript": "6.0.2",
     "typescript-eslint": "8.59.2",
     "vite": "8.0.12"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,md,html,css,scss}": "prettier --write",
+    "src/**/*.{js,jsx,ts,tsx}": "eslint --fix"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
   }
 }
