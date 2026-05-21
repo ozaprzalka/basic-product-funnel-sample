@@ -16,4 +16,8 @@ export default defineConfig({
   ...(isProduction ? { base: `/${name}/` } : { build: { sourcemap: true } }),
 
   plugins: [tailwindcss(), react()],
+
+  resolve: {
+    tsconfigPaths: true,
+  },
 });
