@@ -16,3 +16,5 @@ The React Compiler is not enabled on this template because of its impact on dev 
   - [Optimizing Performance with Lazy Loading in React Router v6 | Dev.to](https://dev.to/abhay_yt_52a8e72b213be229/optimizing-performance-with-lazy-loading-in-react-router-v6-3m5p)
 
   - [Lazy Loading Routes with Vite and React Router v7 | Thomas Schoffelen](https://schof.co/lazy-loading-routes-with-vite-and-react-router-v7/)
+
+  - [Custom Github Pages 404 Page with React Router | Noah Tigner](https://noahtigner.com/articles/github-pages-404-react-router/)
