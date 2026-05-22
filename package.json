@@ -22,7 +22,9 @@
     "predeploy:gh-pages": "touch dist/.nojekyll",
     "deploy:gh-pages": "gh-pages -d dist --dotfiles",
     "deploy": "run-s ci deploy:gh-pages",
-    "test": "vitest run"
+    "test:samples": "vitest run tests/samples",
+    "test:src": "vitest run src",
+    "test": "run-s test:samples test:src"
   },
   "dependencies": {
     "@hookform/resolvers": "5.2.2",
