@@ -10,13 +10,6 @@ The React Compiler is not enabled on this template because of its impact on dev 
 
 ## Useful references
 
-- [Vitest](https://vitest.dev/)
-  - [Getting Started | Guide - Vitest](https://vitest.dev/guide/)
-
-  - [Configuring Vitest | Vitest](https://vitest.dev/config/)
-
-  - [Writing Tests | Guide - Vitest](https://vitest.dev/guide/learn/writing-tests.html)
-
 - [React Router](https://reactrouter.com/)
   - [BrowserRouter basename](https://reactrouter.com/api/declarative-routers/BrowserRouter#basename)
 
@@ -40,3 +33,17 @@ The React Compiler is not enabled on this template because of its impact on dev 
 
 - [Zod](https://zod.dev/)
   - [6 Zod Schema Patterns to Make Your Input Validation 10x More Robust | by Jakub Radzik - Medium]() (2026/02/15)
+
+- [Vitest](https://vitest.dev/)
+  - [Getting Started | Guide - Vitest](https://vitest.dev/guide/)
+
+  - [Configuring Vitest | Vitest](https://vitest.dev/config/)
+
+  - [Writing Tests | Guide - Vitest](https://vitest.dev/guide/learn/writing-tests.html)
+
+- [Playwright](https://playwright.dev/)
+  - [Writing tests](https://playwright.dev/docs/writing-tests)
+
+  - [Setting up CI](https://playwright.dev/docs/ci-intro)
+
+  - [Build your first end-to-end test with Playwright - Training | Microsoft Learn](https://learn.microsoft.com/en-us/training/modules/build-with-playwright/)
