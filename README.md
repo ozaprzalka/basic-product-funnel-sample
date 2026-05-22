@@ -50,3 +50,12 @@
   - [Setting up CI](https://playwright.dev/docs/ci-intro)
 
   - [Build your first end-to-end test with Playwright - Training | Microsoft Learn](https://learn.microsoft.com/en-us/training/modules/build-with-playwright/)
+
+  - [[GitHub] mxschmitt/try-playwright](https://github.com/mxschmitt/try-playwright) - Try Playwright lets you execute and share Playwright scripts in your browser to get started with Playwright.
+    - [Example that checks the page title of `eeglobal.github.io/basic-product-funnel-sample`](https://try.playwright.tech/?l=playwright-test&s=pb9mt4o)
+
+  - [Getting Started with Playwright: A Step-by-Step Guide | Dev.to](https://dev.to/aswani25/getting-started-with-playwright-a-step-by-step-guide-479j)
+
+  - [17 Playwright Best Practices That Actually Matter (With Code) | TestDino Blog](https://testdino.com/blog/playwright-best-practices)
+
+  - [Creating testable React applications with Playwright | Refine](https://refine.dev/blog/playwright-react/)
