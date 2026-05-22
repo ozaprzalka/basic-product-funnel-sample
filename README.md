@@ -20,7 +20,7 @@
 
 3. `npx playwright install chromium --with-deps` to install the playwright Chromium browser
 
-- more information at [Playwright Installation docs](Installation)
+- more information at [Installation | Playwright Docs](https://playwright.dev/docs/intro)
 
 ## 💻 Commands
 
@@ -35,6 +35,7 @@
   - tests located at `tests/e2e/`
 
   - to control and see the tests execution use the command: `npm run test:e2e-ui`
+    - [Running and debugging tests | Playwright Docs](https://playwright.dev/docs/running-tests)
 
 ## 📝 TODO
 
