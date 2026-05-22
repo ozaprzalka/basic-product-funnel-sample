@@ -18,13 +18,14 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "ci": "cross-env NODE_ENV=production run-s build",
+    "cibuild": "cross-env NODE_ENV=production run-s build",
     "predeploy:gh-pages": "touch dist/.nojekyll",
     "deploy:gh-pages": "gh-pages -d dist --dotfiles",
     "deploy": "run-s ci deploy:gh-pages",
     "test:samples": "vitest run tests/samples",
+    "test:integration": "vitest run tests/integration",
     "test:src": "vitest run src",
-    "test": "run-s test:samples test:src"
+    "test": "run-s test:samples test:integration test:src"
   },
   "dependencies": {
     "@hookform/resolvers": "5.2.2",
