@@ -57,6 +57,7 @@
   - [Writing tests](https://playwright.dev/docs/writing-tests)
 
   - [Setting up CI](https://playwright.dev/docs/ci-intro)
+    - [[Question]: How to cache on github actions? · Issue #7249 · microsoft/playwright](https://github.com/microsoft/playwright/issues/7249#issuecomment-1385567519)
 
   - [Build your first end-to-end test with Playwright - Training | Microsoft Learn](https://learn.microsoft.com/en-us/training/modules/build-with-playwright/)
 
