@@ -34,6 +34,8 @@
 - run the Playwright tests: `npm run test:e2e`
   - tests located at `tests/e2e/`
 
+  - to control and see the tests execution use the command: `npm run test:e2e-ui`
+
 ## 📝 TODO
 
 Define e2e tests to cover the full flow of the basic product funnel sample
