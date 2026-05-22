@@ -90,7 +90,7 @@ export default function CheckoutPage() {
               />
 
               <span className="text-xs text-red-300">
-                {errors?.fullName?.message} &nbsp;
+                {errors?.fullName?.message ?? <>&nbsp;</>}
               </span>
             </div>
 
@@ -112,7 +112,7 @@ export default function CheckoutPage() {
               />
 
               <span className="text-xs text-red-300">
-                {errors?.email?.message} &nbsp;
+                {errors?.email?.message ?? <>&nbsp;</>}
               </span>
             </div>
 
@@ -133,7 +133,7 @@ export default function CheckoutPage() {
               />
 
               <span className="text-xs text-red-300">
-                {errors?.address?.message} &nbsp;
+                {errors?.address?.message ?? <>&nbsp;</>}
               </span>
             </div>
 
