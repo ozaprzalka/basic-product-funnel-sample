@@ -44,6 +44,15 @@
 
   - [Writing Tests | Guide - Vitest](https://vitest.dev/guide/learn/writing-tests.html)
 
+- [Testing Library](https://testing-library.com/)
+  - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
+
+  - [How to use act vs waitFor using React Testing Library | Swift Discovery](https://onmyway133.com/posts/how-to-use-act-vs-waitfor-using-react-testing-library/)
+
+  - [Common mistakes with React Testing Library | Kent C. Dodds](https://kentcdodds.com/blog/common-mistakes-with-react-testing-library)
+
+  - [Setting Up Vitest + React Testing Library | Dev.to](https://dev.to/sheikhlimon/setting-up-vitest-react-testing-library-jj)
+
 - [Playwright](https://playwright.dev/)
   - [Writing tests](https://playwright.dev/docs/writing-tests)
 
