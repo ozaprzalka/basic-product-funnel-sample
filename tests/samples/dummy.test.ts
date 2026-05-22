@@ -1,5 +1,3 @@
-import { describe, it, expect } from 'vitest';
-
 describe('dummy tests', () => {
   it('sum 1 + 2', () => {
     expect(1 + 2).toBe(3);
