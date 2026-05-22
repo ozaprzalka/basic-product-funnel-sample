@@ -1,10 +1,57 @@
 # Basic product funnel sample
 
-🚧 Work in progress 🚧
+## 📚 Tech stack
 
-## TypeScript + React + Tailwind CSS + Vite.js + Vitest
+[![TypeScript](https://img.shields.io/badge/-typescript-gray?style=flat&logo=typescript)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/-react-gray?style=flat&logo=react)](https://react.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/-tailwindcss-gray?style=flat&logo=tailwindcss)](https://tailwindcss.com/)
+[![Node.js](https://img.shields.io/badge/-nodejs-gray?style=flat&logo=nodedotjs)](https://nodejs.org/)
+[![Prettier](https://img.shields.io/badge/-prettier-gray?style=flat&logo=prettier)](https://prettier.io/)
+[![ESLint](https://img.shields.io/badge/-eslint-gray?style=flat&logo=eslint&logoColor=4b32c3)](https://eslint.org/)
+[![Vite.js](https://img.shields.io/badge/-vite-gray?style=flat&logo=vite)](https://vite.dev/)
+[![Vitest](https://img.shields.io/badge/-vitest-gray?style=flat&logo=vitest)](https://vitest.dev/)
+[![Playwright](https://custom-icon-badges.demolab.com/badge/Playwright-gray?logo=playwright&logoColor=fff)](https://playwright.dev/)
 
-## Useful references
+## 🏗️ Project setup
+
+1. `git clone ...` it locally
+
+2. `npm i` to install the project dependencies
+
+3. `npx playwright install chromium --with-deps` to install the playwright Chromium browser
+
+- more information at [Playwright Installation docs](Installation)
+
+## 💻 Commands
+
+- start the development: `npm start` or `npm run dev`
+
+- run the Vitest tests: `npm test`
+  - `npm run test:samples` - tests localed at `tests/samples/`
+  - `npm run test:integration` - tests located at `tests/integration/`
+  - `npm run test:src` - tests located at `src/`
+
+- run the Playwright tests: `npm run test:e2e`
+  - tests located at `tests/e2e/`
+
+## 📝 TODO
+
+Define e2e tests to cover the full flow of the basic product funnel sample
+
+The funnel is composed by:
+
+1. Landing Page
+2. Product Details Page
+3. Checkout Page
+   - it contains a simple form with a basic fill up validation
+     - the tests should check the wrong values at the form
+   - once the form validation pass, it will display a success message below the buttons
+
+Those tests should be defined at `tests/e2e` directory
+
+Command to run the e2e tests: `npm run test:e2e`
+
+## 🔖 Useful references
 
 - [TypeScript](https://www.typescriptlang.org/)
 
