@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { useForm, type SubmitHandler } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -32,9 +32,14 @@ export default function CheckoutPage() {
     handleSubmit,
     formState: { errors },
     reset,
+    setFocus,
   } = useForm<FormSchema>({
     resolver: zodResolver(formSchema),
   });
+
+  useEffect(() => {
+    setFocus('fullName');
+  }, []);
 
   const onSubmit: SubmitHandler<FormSchema> = async (data) => {
     // Pause execution for 1 second
