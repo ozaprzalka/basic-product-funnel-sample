@@ -2,13 +2,16 @@
 
 🚧 Work in progress 🚧
 
-## React + TypeScript + Vite + Tailwind CSS
-
-### React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## TypeScript + React + Tailwind CSS + Vite.js + Vitest
 
 ## Useful references
+
+- [TypeScript](https://www.typescriptlang.org/)
+
+- [Tailwind CSS](https://tailwindcss.com/)
+  - [Styling with utility classes](https://tailwindcss.com/docs/styling-with-utility-classes)
+
+- [React](https://react.dev/)
 
 - [React Router](https://reactrouter.com/)
   - [BrowserRouter basename](https://reactrouter.com/api/declarative-routers/BrowserRouter#basename)
