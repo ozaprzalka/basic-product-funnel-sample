@@ -25,7 +25,8 @@
     "test:samples": "vitest run tests/samples",
     "test:integration": "vitest run tests/integration",
     "test:src": "vitest run src",
-    "test": "run-s test:samples test:integration test:src"
+    "test": "run-s test:samples test:integration test:src",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@hookform/resolvers": "5.2.2",
@@ -38,6 +39,7 @@
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
+    "@playwright/test": "1.60.0",
     "@tailwindcss/vite": "4.3.0",
     "@testing-library/jest-dom": "6.9.1",
     "@testing-library/react": "16.3.2",
@@ -60,6 +62,7 @@
     "jsdom": "29.1.1",
     "lint-staged": "17.0.5",
     "npm-run-all2": "9.0.0",
+    "playwright": "1.60.0",
     "prettier": "3.8.3",
     "prettier-plugin-tailwindcss": "0.8.0",
     "simple-git-hooks": "2.13.1",
