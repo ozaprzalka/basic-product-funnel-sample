@@ -19,7 +19,7 @@ export default defineConfig([
     languageOptions: {
       globals: globals.browser,
       parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        project: ['./tsconfig.node.json', './tsconfig.app.json', './tests/e2e/tsconfig.json'],
         tsconfigRootDir: import.meta.dirname,
       },
     },
